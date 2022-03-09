@@ -2,7 +2,7 @@ import discord, os, json
 
 from discord.ext import commands
 
-with open(os.path.join(os.path.dirname(__file__), 'config\\config.json'), 'r') as config:
+with open(os.path.join(os.path.dirname(__file__), 'config/config.json'), 'r') as config:
   get = json.load(config)
   
 prefix = get['prefix']
@@ -22,7 +22,7 @@ async def load(ctx , extension):
 async def unload(ctx , extension):
     Client.unload_extension(f"cogs.{extension}")
 
-for filename in os.listdir(os.path.dirname(os.path.abspath(__file__)) + '\\cogs'):
+for filename in os.listdir(os.path.dirname(os.path.abspath(__file__)) + '/cogs'):
     if filename.endswith(".py"):
         Client.load_extension(f"cogs.{filename[:-3]}")
 
