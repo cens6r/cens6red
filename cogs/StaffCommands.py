@@ -10,6 +10,9 @@ class StaffCommands(commands.Cog):
     @commands.has_permissions(administrator=True)
     @commands.guild_only()
     async def rules(self, ctx):
+    
+      await ctx.message.delete()
+
       ruleEmbed = discord.Embed(title=ctx.guild.name, description="Rules of this server", color=discord.Colour.dark_red())
       ruleEmbed.set_thumbnail(url=ctx.guild.icon_url)
 
