@@ -1,7 +1,7 @@
-import discord, requests
+import discord, requests, os
 from discord.ext import commands
 
-headers = {"Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImRkNGI2YTdjLTg4ZDAtNDlmMy05NzJiLWMwMDIxNDU2ZGM1NyIsImlhdCI6MTY0OTQwOTQ0Niwic3ViIjoiZGV2ZWxvcGVyLzI4NTcyYTAzLWMxOTQtZjZiNi02YTg2LWQyNzg5MzZhM2M5YiIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyI0NS43OS4yMTguNzkiXSwidHlwZSI6ImNsaWVudCJ9XX0.LKrrziKt4bsfN-9ic8T-ZU8A54_gjelTmuohTmMFqG6GbSAE0n76V18bCMXB4VXienH0h4Qb1HcNjwMsA8Fx8w"}
+headers = {"Authorization": f"Bearer {os.environ.get("CLASH_TOKEN")}"}
 api = 'https://proxy.royaleapi.dev'
 
 class ClashCommands(commands.Cog):
