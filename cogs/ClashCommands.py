@@ -1,7 +1,7 @@
 import discord, requests, os
 from discord.ext import commands
 
-headers = {"Authorization": f"Bearer {os.environ.get("CLASH_TOKEN")}"}
+headers = {"Authorization": f"Bearer {os.environ.get('CLASH_TOKEN')}"}
 api = 'https://proxy.royaleapi.dev'
 
 class ClashCommands(commands.Cog):
